@@ -1,0 +1,7 @@
+- đảm bảo không rò rỉ dữ liệu huấn luyện, kiểm tra và xác nhận
+- hình ảnh bị lỗi, thông tin thấp bị loại bỏ
+- đã xoá tập dữ liệu không có hình ảnh trùng lặp, gần trùng lặp
+- 525 loài chim, 84635 training images, 2625 test images (5 hình ảnh cho mỗi loài) và 2625 validation images (5 hình ảnh cho mỗi loài)
+- tất cả hình ảnh đều là nguyên bản và không được tạo bằng cách tăng cường
+- mỗi loài có ít nhất 130 hình ảnh huấn luyện
+- thiếu sót: tỷ lệ hình ảnh loài đực và loài cái, 80% đực, 20% cái, đực có màu sắc đa dạng hơn. Hầu hết tất cả hình ảnh kiểm tra và xác nhận đều lấy từ loài đực. Có thể không hoạt động tốt trên các hình ảnh của loài cái
