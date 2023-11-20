@@ -8,6 +8,11 @@ import 'package:bird_classifier_app/pages/model_architecture.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
 void main() => runApp(MaterialApp(
+  theme: ThemeData(
+    primaryColor: Colors.red,
+  ),
+  debugShowCheckedModeBanner: false,
+  title: "Phân biệt loài chim",
   initialRoute: '/',
   routes: {
     '/': (context) => HomePage(),
@@ -93,18 +98,18 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: Color(0xFFB0D4B8),
       appBar: AppBar(
         title: Text(
-            "Bird Classifier",
+            "Phân biệt loài chim",
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: Colors.amber,
+              color: Color(0xFFA4C3A2),
               fontSize: 25,
             ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.grey[850],
+        backgroundColor: Color(0xFF5D7B6F),
         elevation: 0.0,
       ),
       body: SingleChildScrollView(
@@ -129,13 +134,13 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.fromLTRB(25, 0, 0, 0),
                   height: 350,
                   width: 350,
-                  color: Colors.grey[600],
+                  color: Color(0xFFEAE7D6),
                   child: Align(
                     alignment: Alignment.center,
                     child: Padding(
                         padding: EdgeInsets.fromLTRB(30, 0, 50, 0),
                         child: Text(
-                            "Please select an image",
+                            "Vui lòng chọn ảnh",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 20,
@@ -153,7 +158,7 @@ class _HomePageState extends State<HomePage> {
                 Text(
                     "Name: ",
                     style: TextStyle(
-                      color: Colors.amberAccent[200],
+                      color: Color(0xFFEAE7D6),
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                     )
@@ -176,7 +181,7 @@ class _HomePageState extends State<HomePage> {
                 Text(
                     "Confidence: ",
                     style: TextStyle(
-                      color: Colors.amberAccent[200],
+                      color: Color(0xFFEAE7D6),
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                     )
@@ -201,7 +206,7 @@ class _HomePageState extends State<HomePage> {
               child: Text(
                   "Predict",
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Color(0xFFEAE7D6),
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
                 )
@@ -230,7 +235,9 @@ class _HomePageState extends State<HomePage> {
                     fontSize: 18,
                   ),
                 ),
-                // color: Colors.blue,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xFF5D7B6F)
+                ),
               ),
             ),
             SizedBox(
@@ -246,6 +253,7 @@ class _HomePageState extends State<HomePage> {
                       builder: (context) => new ModelArchitecture(),
                     ),
                   );
+                  
                 },
                 child: Text(
                   "Model Architecture",
@@ -255,7 +263,9 @@ class _HomePageState extends State<HomePage> {
                     fontSize: 18,
                   ),
                 ),
-                // color: Colors.blue,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xFF5D7B6F)
+                ),
               ),
             ),
             SizedBox(
@@ -266,17 +276,24 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: SpeedDial(
         animatedIcon: AnimatedIcons.menu_close,
-        backgroundColor: Colors.amberAccent[400],
+        foregroundColor: Color(0xFF5D7B6F),
+        backgroundColor: Colors.white,
         spacing: 5,
         spaceBetweenChildren: 5,
         closeManually: false,
         children: [
           SpeedDialChild(
-            child: Icon(Icons.camera),
+            child: Icon(
+              Icons.camera, 
+              color: Color(0xFF5D7B6F),
+            ),
             onTap: () => pickImageFromCamera(),
           ),
           SpeedDialChild(
-            child: Icon(Icons.photo_album),
+            child: Icon(
+              Icons.photo_album,
+              color: Color(0xFF5D7B6F),
+            ),
             onTap: () => pickImageFromGalleryOrGDrive(),
           ),
         ],
