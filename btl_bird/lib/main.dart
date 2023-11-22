@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Color(0xFFB0D4B8),
       appBar: AppBar(
         title: Text(
-            "Phân biệt loài chim",
+            "Nhận diện loài chim",
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.white,
