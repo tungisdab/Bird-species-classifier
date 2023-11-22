@@ -1,3 +1,4 @@
+import 'package:bird_classifier_app/pages/color_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,18 +13,18 @@ class _DataUsedState extends State<DataUsed> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: ColorPage().d,
       appBar: AppBar(
         title: Text(
             "Data Used",
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: Colors.amber,
+              color: Colors.white,
               fontSize: 25,
             ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.grey[850],
+        backgroundColor: ColorPage().c,
         elevation: 0.0,
       ),
       body: SingleChildScrollView(
@@ -38,14 +39,14 @@ class _DataUsedState extends State<DataUsed> {
                 Text(
                     "Number of Classes: ",
                     style: TextStyle(
-                      color: Colors.amberAccent[200],
+                      color: Colors.black,
                       fontSize: 20,
                     )
                 ),
                 Text(
                   "400",
                   style: TextStyle(
-                    color: Colors.white70,
+                    color: Colors.black,
                     fontSize: 20,
                   ),
                 ),
@@ -60,14 +61,14 @@ class _DataUsedState extends State<DataUsed> {
                 Text(
                     "Training Set Size: ",
                     style: TextStyle(
-                      color: Colors.amberAccent[200],
+                      color: Colors.black,
                       fontSize: 20,
                     )
                 ),
                 Text(
                   "58,388 Images",
                   style: TextStyle(
-                    color: Colors.white70,
+                    color: Colors.black,
                     fontSize: 20,
                   ),
                 ),
@@ -82,14 +83,14 @@ class _DataUsedState extends State<DataUsed> {
                 Text(
                     "Validation Set Size: ",
                     style: TextStyle(
-                      color: Colors.amberAccent[200],
+                      color: Colors.black,
                       fontSize: 20,
                     )
                 ),
                 Text(
                   "2,000 Images",
                   style: TextStyle(
-                    color: Colors.white70,
+                    color: Colors.black,
                     fontSize: 20,
                   ),
                 ),
@@ -104,14 +105,14 @@ class _DataUsedState extends State<DataUsed> {
                 Text(
                     "Testing Set Size: ",
                     style: TextStyle(
-                      color: Colors.amberAccent[200],
+                      color: Colors.black,
                       fontSize: 20,
                     )
                 ),
                 Text(
                   "2,000 Images",
                   style: TextStyle(
-                    color: Colors.white70,
+                    color: Colors.black,
                     fontSize: 20,
                   ),
                 ),
@@ -126,7 +127,7 @@ class _DataUsedState extends State<DataUsed> {
                 Text(
                     "Image from the Train Set",
                     style: TextStyle(
-                      color: Colors.amberAccent[200],
+                      color: Colors.black,
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                     ),
@@ -148,7 +149,7 @@ class _DataUsedState extends State<DataUsed> {
                   Text(
                     "Label: Harlequin Duck",
                     style: TextStyle(
-                      color: Colors.white70,
+                      color: Colors.black,
                       fontSize: 18,
                    ),
                   ),
@@ -163,7 +164,7 @@ class _DataUsedState extends State<DataUsed> {
                   Text(
                     "Image from the Validation Set",
                     style: TextStyle(
-                      color: Colors.amberAccent[200],
+                      color: Colors.black,
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                     ),
@@ -185,7 +186,7 @@ class _DataUsedState extends State<DataUsed> {
                   Text(
                     "Label: Abyssinian Ground Hornbill",
                     style: TextStyle(
-                      color: Colors.white70,
+                      color: Colors.black,
                       fontSize: 18,
                     ),
                   ),
@@ -200,7 +201,7 @@ class _DataUsedState extends State<DataUsed> {
                   Text(
                     "Image from the Test Set",
                     style: TextStyle(
-                      color: Colors.amberAccent[200],
+                      color: Colors.black,
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                     ),
@@ -222,7 +223,7 @@ class _DataUsedState extends State<DataUsed> {
                   Text(
                     "Label: African Emerald Cuckoo",
                     style: TextStyle(
-                      color: Colors.white70,
+                      color: Colors.black,
                       fontSize: 18,
                     ),
                   ),

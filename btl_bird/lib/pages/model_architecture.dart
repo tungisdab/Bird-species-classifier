@@ -1,3 +1,4 @@
+import 'package:bird_classifier_app/pages/color_page.dart';
 import 'package:flutter/material.dart';
 
 class ModelArchitecture extends StatefulWidget {
@@ -11,18 +12,18 @@ class _ModelArchitectureState extends State<ModelArchitecture> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: ColorPage().d,
       appBar: AppBar(
         title: Text(
           "Model Architecture",
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            color: Colors.amber,
+            color: Colors.white,
             fontSize: 25,
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.grey[850],
+        backgroundColor: ColorPage().c,
         elevation: 0.0,
       ),
       body: SingleChildScrollView(
@@ -37,14 +38,14 @@ class _ModelArchitectureState extends State<ModelArchitecture> {
                 Text(
                   "Model Used: ",
                   style: TextStyle(
-                    color: Colors.amberAccent[200],
+                    color: Colors.black,
                     fontSize: 20,
                   ),
                 ),
                 Text(
                   "MobileNetV2",
                   style: TextStyle(
-                    color: Colors.white70,
+                    color: Colors.black,
                     fontSize: 20,
                   ),
                 ),
@@ -59,14 +60,14 @@ class _ModelArchitectureState extends State<ModelArchitecture> {
                   Text(
                     "Epochs: ",
                     style: TextStyle(
-                      color: Colors.amberAccent[200],
+                      color: Colors.black,
                       fontSize: 20,
                     ),
                   ),
                   Text(
                     "30 (early stopping at 17)",
                     style: TextStyle(
-                      color: Colors.white70,
+                      color: Colors.black,
                       fontSize: 20,
                     ),
                   ),
@@ -81,14 +82,14 @@ class _ModelArchitectureState extends State<ModelArchitecture> {
                   Text(
                     "Batch Size: ",
                     style: TextStyle(
-                      color: Colors.amberAccent[200],
+                      color: Colors.black,
                       fontSize: 20,
                     ),
                   ),
                   Text(
                     "128",
                     style: TextStyle(
-                      color: Colors.white70,
+                      color: Colors.black,
                       fontSize: 20,
                     ),
                   ),
@@ -103,14 +104,14 @@ class _ModelArchitectureState extends State<ModelArchitecture> {
                   Text(
                     "Test Accuracy: ",
                     style: TextStyle(
-                      color: Colors.amberAccent[200],
+                      color: Colors.black,
                       fontSize: 20,
                     ),
                   ),
                   Text(
                     "93.99%",
                     style: TextStyle(
-                      color: Colors.white70,
+                      color: Colors.black,
                       fontSize: 20,
                     ),
                   ),
@@ -122,7 +123,7 @@ class _ModelArchitectureState extends State<ModelArchitecture> {
             Text(
               "Neural Network Architecture",
               style: TextStyle(
-                color: Colors.amberAccent[200],
+                color: Colors.black,
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
@@ -143,7 +144,7 @@ class _ModelArchitectureState extends State<ModelArchitecture> {
             Text(
               "Model Performance",
               style: TextStyle(
-                color: Colors.amberAccent[200],
+                color: Colors.black,
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
@@ -164,7 +165,7 @@ class _ModelArchitectureState extends State<ModelArchitecture> {
             Text(
               "Model Accuracy",
               style: TextStyle(
-                color: Colors.white70,
+                color: Colors.black,
                 fontSize: 18,
               ),
             ),
@@ -184,7 +185,7 @@ class _ModelArchitectureState extends State<ModelArchitecture> {
             Text(
               "Model Loss",
               style: TextStyle(
-                color: Colors.white70,
+                color: Colors.black,
                 fontSize: 18,
               ),
             ),

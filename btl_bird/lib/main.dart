@@ -1,3 +1,4 @@
+import 'package:bird_classifier_app/pages/color_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
@@ -104,7 +105,7 @@ class _HomePageState extends State<HomePage> {
             "Phân biệt loài chim",
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: Color(0xFFA4C3A2),
+              color: Colors.white,
               fontSize: 25,
             ),
         ),
@@ -152,49 +153,103 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               height: 20,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                    "Name: ",
-                    style: TextStyle(
-                      color: Color(0xFFEAE7D6),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    )
-                ),
-                Text(
-                  "$_name",
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 20,
+            Container(
+              margin: EdgeInsets.fromLTRB(22, 0, 22, 0),
+              // decoration: BoxDecoration(
+              //   borderRadius: BorderRadius.circular(10),
+              // ),
+              color: ColorPage().a,
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                          "    Loài chim: ",
+                          style: TextStyle(
+                            color: ColorPage().c,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          )
+                      ),
+                      Text(
+                        "$_name",
+                        style: TextStyle(
+                          color: ColorPage().c,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                    "Confidence: ",
-                    style: TextStyle(
-                      color: Color(0xFFEAE7D6),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    )
-                ),
-                Text(
-                  "$_confidence",
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 20,
+                  SizedBox(
+                    height: 10,
                   ),
-                ),
-              ],
-           ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                          "    Xác suất (Confidence): ",
+                          style: TextStyle(
+                            color: ColorPage().c,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          )
+                      ),
+                      Text(
+                        "$_confidence",
+                        style: TextStyle(
+                          color: ColorPage().c,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          //   Row(
+          //     mainAxisAlignment: MainAxisAlignment.start,
+          //     children: [
+          //       Text(
+          //           "Loài chim: ",
+          //           style: TextStyle(
+          //             color: ColorPage().c,
+          //             fontWeight: FontWeight.bold,
+          //             fontSize: 20,
+          //           )
+          //       ),
+          //       Text(
+          //         "$_name",
+          //         style: TextStyle(
+          //           color: Colors.white70,
+          //           fontSize: 20,
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          //   SizedBox(
+          //     height: 10,
+          //   ),
+          //   Row(
+          //     mainAxisAlignment: MainAxisAlignment.start,
+          //     children: [
+          //       Text(
+          //           "Xác suất (Confidence): ",
+          //           style: TextStyle(
+          //             color: ColorPage().c,
+          //             fontWeight: FontWeight.bold,
+          //             fontSize: 20,
+          //           )
+          //       ),
+          //       Text(
+          //         "$_confidence",
+          //         style: TextStyle(
+          //           color: Colors.white70,
+          //           fontSize: 20,
+          //         ),
+          //       ),
+          //     ],
+          //  ),
             SizedBox(
               height: 20,
             ),
@@ -204,7 +259,7 @@ class _HomePageState extends State<HomePage> {
                 applyModelOnImage(File(_pickedFile!.path));
               },
               child: Text(
-                  "Predict",
+                  "Dự đoán",
                 style: TextStyle(
                   color: Color(0xFFEAE7D6),
                   fontWeight: FontWeight.bold,
@@ -212,6 +267,11 @@ class _HomePageState extends State<HomePage> {
                 )
               ),
               // color: Colors.blue,
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF5D7B6F)),
+                padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.fromLTRB(25, 10, 25, 10)),
+            
+              ),
             ),
             SizedBox(
               height: 10,
